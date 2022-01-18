@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+<section>
+    <div class="collection-link">
+        <a href="/">Main menu</a>
+        <a href="/collection/add">Add new</a>
+    </div>
+
+    <div class="collection-big">
+        <% array.forEach(obj => { %>
+            <div class="collection-small">
+                <p><%= obj.name %></p>
+                <p>Written by: <%= obj.author %></p>
+                <p>Published on: <%= obj.publish %></p>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<%- include('partials/footer.ejs') %>

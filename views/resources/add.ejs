@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') %>
+
+<section>
+    <form class="add" action="/collection/add" method="POST">
+        <label>Source type: 
+            <section name="type">
+                <option value="book">book</option>
+                <option value="movie">movie</option>
+                <option value="music">music</option>
+                <option value="shows">shows</option>
+                <option value="newspaper">newspaper</option>
+                <option value="magazine">magazine</option>
+            </section>
+        </label>
+
+        <label>Source name:
+            <input type="text" placeholder="eg. Star Wars">
+        </label>
+
+        <label>Author: 
+            <input type="text" placeholder="eg. George Lucas">
+        </label>
+
+        <label>Published on: 
+            <input type="date" placeholder="yyyy/mm/dd">
+        </label>
+        <p>Content: </p>
+        <input type="text" placeholder="eg. May the Force be with you.">
+
+        <div class="add-link">
+            <a href="/collection">Back</a>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</section>
+
+<%- include('partials/footer.ejs') %>

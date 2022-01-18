@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') %>
+
+<section>
+    <form class="add" action="/collection/show/edit" method="POST">
+        <label>Source type: 
+            <section name="type">
+                <option selected><%= object.type %></option>
+                <option value="book">book</option>
+                <option value="movie">movie</option>
+                <option value="music">music</option>
+                <option value="shows">shows</option>
+                <option value="newspaper">newspaper</option>
+                <option value="magazine">magazine</option>
+            </section>
+        </label>
+
+        <label>Source name:
+            <input type="text" value="<%= object.name %>">
+        </label>
+
+        <label>Author: 
+            <input type="text" value="<%= object.author %>">
+        </label>
+
+        <label>Published on: 
+            <input type="date" value="<%= object.publish %>">
+        </label>
+
+        <p>Content: </p>
+        <input type="text" value="<%= object.content %>">
+
+        <div class="add-link">
+            <a href="/collection/show">Back</a>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</section>
+
+<%- include('partials/footer.ejs') %>

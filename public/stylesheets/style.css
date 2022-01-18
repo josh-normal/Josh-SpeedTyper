@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 0;
+  margin: 0 0;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  justify-self: flex-start;
+  margin: 0 0;
+  padding: 0 0;
+  height: 10%;
+  width: 100vw;
+  background-color: rgb(83, 195, 255);
+  display: flex;
+}
+
+.header-link {
+  width: 73%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header-link > h1 {
+  align-self: center;
+  height: 35px;
+}
+
+.header-link > h1 > a:hover {
+  color: black;
+}
+
+.icon {
+  display: flex;
+  width: 27%;
+}
+
+.icon > h1 {
+  padding: 0 0;
+  margin: 0 0 0 10px;
+  color: white;
+  font-size: 30px;
+  align-self: center;
+}
+
+.icon > img {
+  padding: 0 0;
+  margin: 10px 0 0 20px;
+  height: 70px;
+}
+
+section {
+  align-self: center;
+  flex-direction: column;
+  width: 700px;
+  height: 90%;
+}
+
+.index {
+  align-self: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px 0 0 15px;
+  margin: 40px 0 0 0;
+  height: 200px;
+  font-size: 20px;
+}
+
+.index-link {
+  height: 45px;
+  width: 200px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.index-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
+.practice {
+  padding: 0 0;
+  margin: 80px 0 20px 0;
+}
+
+.practice-visual {
+  padding: 0 10px 0 15px;
+  margin: 0 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.practice-visual > img {
+  height: 50px;
+}
+
+.practice-type {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: rgb(223, 248, 255);
+  padding: 0 15px 15px 15px;
+  margin: 0 0;
+  font-size: 18px;
+}
+
+.practice-type > form > input {
+  width: 100%;
+  height: 28px;
+  font-size: 18px;
+}
+
+.practice-link-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.practice-link {
+  height: 45px;
+  width: 150px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.practice-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
+.practice-source {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px 0 15px 20px;
+  margin: 50px 0 20px 0;
+  font-size: 18px;
+  background-color: rgb(223, 248, 255);
+}
+
+.practice-source > p {
+  padding: 0 0 0 25px;
+  margin: 5px 0;
+}
+
+.history {
+  align-self: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 50px 0 15px 0;
+  font-size: 15px;
+}
+
+.history > p {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  height: 500px;
+}
+
+table, th, td {
+  border: 1px solid rgb(83, 195, 255);
+}
+
+.history-link {
+  height: 45px;
+  width: 150px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.history-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.collection {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0 0;
+  margin: 15px 0 15px 0;
+  width: 100%;
+}
+
+.collection-link > a {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(76, 162, 253);
+  height: 75px;
+  width: 100px;
+}
+
+.collection-big {
+  display: flex;
+}
+
+.collection-small {
+  height: 300px;
+  width: 500px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.show {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0 0;
+  margin: 15px 0 15px 0;
+  width: 100%;
+}
+
+.show-link {
+  padding: 0 0;
+  margin: 15px 0 15px 0;
+  width: 100%;
+}
+
+.show-link > a {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(76, 162, 253);
+  height: 75px;
+  width: 100px;
+}
+
+.show-link > form > button {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(76, 162, 253);
+  height: 75px;
+  width: 100px;
+}
+
+.add {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0 0;
+  margin: 15px 0 15px 0;
+  width: 100%;
+}
+
+.add-link > a,
+button {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(76, 162, 253);
+  height: 75px;
+  width: 100px;
+}

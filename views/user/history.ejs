@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Josh's Speed Typer</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../images/keyboard.png" alt="keyboard icon">
+                <h1>SpeedTyper</h1>
+        </div>
+        <div class="header-link">
+            <h1><a href="/">Home</a></h1>
+            <h1><a href="/resources">Resources</a></h1>
+            <h1><a href="/">Sign in</a></h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="history">
+            <p>Your last 10 practices information</p>
+            <table cellspacing="0" cellpadding="0">
+                <colgroup>
+                    <col width="40px">
+                    <col width="100px">
+                    <col width="200px">
+                    <col width="120px">
+                    <col>
+                </colgroup>
+                <tr class="table-head">
+                    <td>#</td>
+                    <td>Speed</td>
+                    <td>Source</td>
+                    <td>Type</td>
+                    <td>When</td>
+                </tr>
+                <% for(let i = 1; i <= 20; i++) { %>
+                    <tr>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+
+        <div class="history-link">
+                <a href="/">Main menu</a>
+        </div>
+
+        <div class="history">
+            <p>Your highest 10 practices information</p>
+            <table>
+                <colgroup>
+                    <col width="40px">
+                    <col width="100px">
+                    <col width="200px">
+                    <col width="120px">
+                    <col>
+                </colgroup>
+                <tr class="table-head">
+                    <td>#</td>
+                    <td>Speed</td>
+                    <td>Source</td>
+                    <td>Type</td>
+                    <td>When</td>
+                </tr>
+                <% for(let i = 1; i <= 20; i++) { %>
+                    <tr>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                        <td><%= i %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        <br><br><br>
+    </section>
+</body>
+</html>

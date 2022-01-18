@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+<section>
+    <div class="show">
+        <p>Source: <%= about.type %></p>
+        <p>Name: <%= about.name %></p>
+        <p>Author: <%= about.author %></p>
+        <p>Published on: <%= about.publish %></p>
+        <p>Content:</p>
+        <p><%= about.content %></p>
+    </div>
+
+    <div class="show-link">
+        <a href="/collection">Back</a>
+        <a href="/collection/show/edit">Edit this</a>
+        <form action="/collection/show/<!-- ejs id  -->id?_method=DELETE" method="DELETE">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</section>
+
+<%- include('partials/footer.ejs') %>

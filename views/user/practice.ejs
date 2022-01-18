@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Josh's Speed Typer</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../images/keyboard.png" alt="keyboard icon">
+                <h1>SpeedTyper</h1>
+        </div>
+        <div class="header-link">
+            <h1><a href="/">Home</a></h1>
+            <h1><a href="/resources">Resources</a></h1>
+            <h1><a href="/">Sign in</a></h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="practice">
+            <div class="practice-visual">
+                <img src="../images/car.png" alt="car">
+                <p><%= '50' %> wpm</p>
+            </div>
+            <div class="practice-type">
+                <p><%=  %>Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues.</p>
+                <form action="">
+                    <input type="text" placeholder="Press SPACE to start typing">
+                </form>
+            </div>
+        </div>
+
+        <div class="practice-link-container">
+            <div class="practice-link">
+                <a href="/">Main menu</a>
+            </div>
+            <div class="practice-link">
+                <a href="/practice">Next practice</a>
+            </div>
+        </div>
+
+        <div class="practice-source">
+            <p style="padding: 0 0; font-size: 20px;">This is a quote from a <%= 'movie' %>:</p>
+            <p>Name: <%= 'The Matrix' %></p>
+            <p>Author: <%= 'Josh Nguyen' %></p>
+            <p>Published on: <%= 'date' %></p>
+            <p>Your last speed: <%= '50' %> wpm</p>
+        </div>
+    </section>
+</body>
+</html>
