@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" href="images/keyboard.png" type="image/icon type">
     <title>Josh's Speed Typer</title>
 </head>
 <body>
     <header>
         <div class="icon">
-            <img src="../images/keyboard.png" alt="keyboard icon">
-                <h1>SpeedTyper</h1>
+            <img src="images/keyboard.png" alt="keyboard icon">
+            <h1><a href="/">SpeedTyper</a></h1>
         </div>
         <div class="header-link">
             <h1><a href="/">Home</a></h1>
             <h1><a href="/resources">Resources</a></h1>
-            <h1><a href="/">Sign in</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
         </div>
     </header>
 
@@ -38,15 +43,17 @@
                     <td>Type</td>
                     <td>When</td>
                 </tr>
-                <% for(let i = 1; i <= 20; i++) { %>
+                <% let i = 0; %>
+                <% user.history.forEach(elm => { %>
+                    <% i += 1 %>
                     <tr>
                         <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
+                        <td><%= elm.speed %></td>
+                        <td><%= elm.source.name %></td>
+                        <td><%= elm.source.type %></td>
+                        <td><%= elm.time %></td>
                     </tr>
-                <% } %>
+                <% }) %>
             </table>
         </div>
 
@@ -71,15 +78,17 @@
                     <td>Type</td>
                     <td>When</td>
                 </tr>
-                <% for(let i = 1; i <= 20; i++) { %>
+                <% i = 0 %>
+                <% user.history.forEach(elm => { %>
+                    <% i += 1 %>
                     <tr>
                         <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
-                        <td><%= i %></td>
+                        <td><%= elm.speed %></td>
+                        <td><%= elm.source.name %></td>
+                        <td><%= elm.source.type %></td>
+                        <td><%= elm.time %></td>
                     </tr>
-                <% } %>
+                <% }) %>
             </table>
         </div>
         <br><br><br>

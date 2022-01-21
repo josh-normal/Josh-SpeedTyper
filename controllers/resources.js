@@ -1,6 +1,5 @@
-const model = require('../models/user')
-const User = model.User;
-const Resources = model.Resources;
+const User = require('../models/user')
+const Resources = require('../models/resources')
 
 module.exports = {
     renderAll,
@@ -14,12 +13,13 @@ module.exports = {
 
 
 function renderAll(req, res) {
-    const array = [{ name: 'this project', author: 'Josh'}]
+    const array = [{ name: 'The Matrix', author: 'Josh', publish: '2019-05-10'}]
     res.render('resources/resources', { array })
 }
 
 function show(req, res) {
-    res.render('resources/show', { about: req.params.id })
+    const source = { type: 'movie', name: 'The Matrix', author: 'Josh', publish: '2019-05-10'}
+    res.render('resources/show', { source })
 }
 
 function addForm(req, res) {
@@ -27,8 +27,8 @@ function addForm(req, res) {
 }
 
 function editForm(req, res) {
-    const object = { name: 'this project', author: 'Josh'}
-    res.render('resources/edit', { object })
+    const source = { type: 'movie', name: 'The Matrix', author: 'Josh', publish: '2019-05-10'}
+    res.render('resources/edit', { source })
 }
 
 function edit(req, res) {

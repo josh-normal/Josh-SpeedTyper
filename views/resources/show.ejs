@@ -1,22 +1,50 @@
-<%- include('partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="icon" href="../images/keyboard.png" type="image/icon type">
+    <title>Josh's Speed Typer</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../images/keyboard.png" alt="keyboard icon">
+                <h1>SpeedTyper</h1>
+        </div>
+        <div class="header-link">
+            <h1><a href="/">Home</a></h1>
+            <h1><a href="/resources">Resources</a></h1>
+            <h1><a href="/">Sign in</a></h1>
+        </div>
+    </header>
 
 <section>
     <div class="show">
-        <p>Source: <%= about.type %></p>
-        <p>Name: <%= about.name %></p>
-        <p>Author: <%= about.author %></p>
-        <p>Published on: <%= about.publish %></p>
+        <p>Source: <%= source.type %></p>
+        <p>Name: <%= source.name %></p>
+        <p>Author: <%= source.author %></p>
+        <p>Published on: <%= source.publish %></p>
         <p>Content:</p>
-        <p><%= about.content %></p>
+        <div class="show-content">
+            <p><%= source.content %>Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues.</p>
+        </div>
     </div>
 
-    <div class="show-link">
-        <a href="/collection">Back</a>
-        <a href="/collection/show/edit">Edit this</a>
-        <form action="/collection/show/<!-- ejs id  -->id?_method=DELETE" method="DELETE">
-            <button type="submit">Delete</button>
+    <div class="show-link-container">
+        <div class="show-link">
+            <a href="/resources">Back</a>
+        </div>
+        <div class="show-link">
+            <a href="/resources/show/edit">Edit this</a>
+        </div>
+        <form class="show-link" action="/resources/show/<!-- ejs id  -->id?_method=DELETE" method="DELETE">
+            <button class="show-link-btn" type="submit">Delete</button>
         </form>
     </div>
 </section>
 
-<%- include('partials/footer.ejs') %>
+</body>
+</html>

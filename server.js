@@ -4,17 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override')
-// connect to the database with Mongoose
+let session = require('express-session')
+let passport = require('passport')
+
+
+var app = express();
+
+
+require('dotenv').config()
 require('./config/database');
+require('./config/passport');
 
 
 var indexRouter = require('./routes/index');
-var userRouter = require('./routes/user');
 var resourcesRouter = require('./routes/resources');
-// var practiceRouter = require('./routes/practice');
-// var historyRouter = require('./routes/history');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,13 +31,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
+app.use(session({
+  secret: 'JoshAwesome',
+  resave: false,
+  saveUninitialized: true,
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 app.use('/', indexRouter);
-app.use('/user', userRouter);
 app.use('/resources', resourcesRouter);
-// app.use('/practice', practiceRouter);
-// app.use('/history', historyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

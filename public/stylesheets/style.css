@@ -43,8 +43,9 @@ header {
 }
 
 .icon {
-  display: flex;
   width: 27%;
+  display: flex;
+  width: 270px;
 }
 
 .icon > h1 {
@@ -53,6 +54,10 @@ header {
   color: white;
   font-size: 30px;
   align-self: center;
+}
+
+.icon > h1 > a:hover {
+  color: black;
 }
 
 .icon > img {
@@ -203,87 +208,157 @@ table, th, td {
   background-color: rgb(83, 195, 255);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.collection {
-  border: 1px solid grey;
-  border-radius: 10px;
-  padding: 0 0;
-  margin: 15px 0 15px 0;
-  width: 100%;
-}
-
-.collection-link > a {
-  font-size: 20px;
-  color: white;
-  background-color: rgb(76, 162, 253);
-  height: 75px;
-  width: 100px;
-}
-
-.collection-big {
+.resources-link-container {
   display: flex;
+  justify-content: space-between;
+  margin: 40px 0 40px 0;
 }
 
-.collection-small {
-  height: 300px;
-  width: 500px;
+.resources-link {
+  height: 45px;
+  width: 180px;
   border: 1px solid grey;
   border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.resources-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
+.resources-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 40px;
+}
+
+.resources-small {
+  height: 100px;
+  width: 380px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px 0 5px 7px;
+  background-color: rgb(74, 183, 255);
+}
+
+.resources-small > a {
+  margin: 0 0;
+  padding: 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  line-height: 29px;
+}
+
+.resources-small:hover {
+  background-color: rgb(42, 184, 42);
+}
+
+.resources-section {
+  width: 800px;
 }
 
 .show {
   border: 1px solid grey;
   border-radius: 10px;
-  padding: 0 0;
-  margin: 15px 0 15px 0;
-  width: 100%;
+  padding:  0 20px 20px 20px;
+  margin: 50px 0 20px 0;
+  font-size: 18px;
+  background-color: rgb(223, 248, 255);
+}
+
+.show-content {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.show-content > p {
+  line-height: 30px;
+  font-size: 19px;
+  margin: 7px;
+}
+
+.show-link-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0 40px 0;
 }
 
 .show-link {
-  padding: 0 0;
-  margin: 15px 0 15px 0;
-  width: 100%;
+  height: 45px;
+  width: 120px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
 }
 
-.show-link > a {
+.show-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
+.show-link-btn {
   font-size: 20px;
   color: white;
-  background-color: rgb(76, 162, 253);
-  height: 75px;
-  width: 100px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.show-link > form > button {
-  font-size: 20px;
-  color: white;
-  background-color: rgb(76, 162, 253);
-  height: 75px;
-  width: 100px;
-}
-
-.add {
+.edit {
   border: 1px solid grey;
   border-radius: 10px;
-  padding: 0 0;
-  margin: 15px 0 15px 0;
-  width: 100%;
+  padding:  10px 20px 20px 20px;
+  margin: 50px 0 20px 0;
+  font-size: 18px;
+  background-color: rgb(223, 248, 255);
+  line-height: 40px;
 }
 
-.add-link > a,
-button {
-  font-size: 20px;
-  color: white;
-  background-color: rgb(76, 162, 253);
-  height: 75px;
+.edit > p {
+  line-height: 30px;
+  font-size: 19px;
+  margin: 3px 0;
+  padding: 0 0;
+}
+
+.edit-content {
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 10px;
+  line-height: 25px;
+  font-size: 15px;
+  width: 655px;
+  height: 300px;
+}
+
+.edit-link-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0 40px 0;
+}
+
+.edit-link {
+  height: 45px;
   width: 100px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+  color: white;
+}
+
+.edit-link:hover {
+  background-color: rgb(83, 195, 255);
 }
