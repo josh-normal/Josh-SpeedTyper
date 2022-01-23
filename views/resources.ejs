@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="icon" href="../images/keyboard.png" type="image/icon type">
+    <title>Josh's Speed Typer</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../images/keyboard.png" alt="keyboard icon">
+            <h1><a href="/user">SpeedTyper</a></h1>
+        </div>
+        <div class="header-link">
+            <h1><a href="/user">Home</a></h1>
+            <h1><a href="/user/resources">Resources</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
+        </div>
+    </header>
+    <section class="resources-section">
+        <div class="resources-link-container">
+            <div class="resources-link">
+                <a href="/user">Main menu</a>
+            </div>
+            <div class="resources-link">
+                <a href="/user/resources/add">Add new content</a>
+            </div>
+        </div>
+
+        <div class="resources-main">
+            <% user.resources.forEach(source => { %>
+                <div class="resources-small">
+                    <a href="/user/resources/<%= source.id %>/show">
+                        <%= source.name %><br>
+                        Author: <%= source.author %><br>
+                        Published: <%= source.publish %>
+                    </a>
+                </div>
+            <% }) %>
+        </div><br><br><br>
+    </section>
+</body>
+</html>

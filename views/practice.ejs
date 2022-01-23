@@ -4,53 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="icon" href="images/keyboard.png" type="image/icon type">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="icon" href="../images/keyboard.png" type="image/icon type">
+    <script defer src="../javascripts/practice.js"></script>
     <title>Josh's Speed Typer</title>
 </head>
 <body>
     <header>
         <div class="icon">
-            <img src="images/keyboard.png" alt="keyboard icon">
-                <h1>SpeedTyper</h1>
+            <img src="../images/keyboard.png" alt="keyboard icon">
+            <h1><a href="/user">SpeedTyper</a></h1>
         </div>
         <div class="header-link">
-            <h1><a href="/">Home</a></h1>
-            <h1><a href="/resources">Resources</a></h1>
-            <h1><a href="/">Sign in</a></h1>
+            <h1><a href="/user">Home</a></h1>
+            <h1><a href="/user/resources">Resources</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
         </div>
     </header>
 
     <section>
         <div class="practice">
             <div class="practice-visual">
-                <img src="images/car.png" alt="car">
-                <p><%= '50' %> wpm</p>
+                <div class="carTrack">
+                    <img class="car" src="../images/car.png" alt="car">
+                </div>
+                <p class="timer">Press SPACE to start...</p>
             </div>
             <div class="practice-type">
-                <p><%=  %>Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues.</p>
-                <form action="">
-                    <input type="text" placeholder="Press SPACE to start typing">
-                </form>
+                <textarea class="content-input" role="textbox" type="text" contenteditable="false" spellcheck="false" autocorrect="off" onpaste="false;" ondrop="false;" autocomplete="off" autocapitalize="off" autofocus></textarea>
+                <div class="content-display" unselectable="on">
+                    <%= source.content %>
+                </div>
             </div>
         </div>
 
         <div class="practice-link-container">
             <div class="practice-link">
-                <a href="/">Main menu</a>
+                <a href="/user">Main menu</a>
             </div>
             <div class="practice-link">
-                <a href="/practice">Next practice</a>
+                <a href="/user/practice">Next practice</a>
             </div>
         </div>
 
         <div class="practice-source">
-            <p style="padding: 0 0; font-size: 20px;">This is a quote from a <%= 'movie' %>:</p>
-            <p>Name: <%= 'The Matrix' %></p>
-            <p>Author: <%= 'Josh Nguyen' %></p>
-            <p>Published on: <%= 'date' %></p>
-            <p>Your last speed: <%= '50' %> wpm</p>
+            <p style="padding: 0 0; font-size: 20px;">This is a quote from a <%= source.type %>:</p>
+            <p>Name: <%= source.name %></p>
+            <p>Author: <%= source.author %></p>
+            <p>Published on: <%= source.publish %></p>
+            <p class="speed"></p>
         </div>
+        <form class="invisible" action="/user/practice" method="POST">
+            <input type="text" name="sourceid" value="<%= source.id %>">
+            <input class="invisibleInput" name="speed" type="text" value="1">
+        </form>
     </section>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+    <link rel="icon" href="../../images/keyboard.png" type="image/icon type">
+    <title>Josh's Speed Typer</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="../../images/keyboard.png" alt="keyboard icon">
+            <h1><a href="/user">SpeedTyper</a></h1>
+        </div>
+        <div class="header-link">
+            <h1><a href="/user">Home</a></h1>
+            <h1><a href="/user/resources">Resources</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
+        </div>
+    </header>
+    <section>
+        <form action="/user/resources" method="POST">
+            <div class="edit">
+                <label>Source type:
+                    <select type="text" name="type">
+                        <option value="book">book</option>
+                        <option value="movie">movie</option>
+                        <option value="music">song</option>
+                        <option value="shows">shows</option>
+                        <option value="newspaper">newspaper</option>
+                        <option value="magazine">magazine</option>
+                    </select>
+                </label><br>
+                <label>Source name:
+                    <input name="name" type="text" autocomplete="off" placeholder="eg. Star Wars">
+                </label><br>
+                <label>Author:
+                    <input name="author" type="text" autocomplete="off" placeholder="eg. George Lucas">
+                </label><br>
+                <label>Published on:
+                    <input name="publish" type="date" placeholder="yyyy/mm/dd">
+                </label>
+                <p>Content: </p>
+                <input name="content" class="edit-content" type="text" autocomplete="off" placeholder="Please write your content here.">
+            </div>
+            <div class="edit-link-container">
+                <div class="edit-link">
+                    <a href="/user/resources">Back</a>
+                </div>
+                <button type="Submit" class="edit-link">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

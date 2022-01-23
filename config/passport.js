@@ -13,6 +13,7 @@ passport.use(new GoogleStrategy({
             return cb(null, user);
         } else {
             let newUser = new User({
+                returnUser: false,
                 firstname: profile.displayName,
                 lastname: profile.familyName,
                 email: profile.emails[0].value,

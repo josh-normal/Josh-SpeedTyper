@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 1000px;
+  background-color: rgba(235, 235, 235, 0.097);
 }
 
 a {
@@ -73,6 +74,32 @@ section {
   height: 90%;
 }
 
+.prompt {
+  align-self: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px 0 0 15px;
+  margin: 70px 0 0 0;
+  height: 250px;
+  font-size: 20px;
+}
+
+.prompt-link {
+  height: 45px;
+  width: 150px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.prompt-link:hover {
+  background-color: rgb(83, 195, 255);
+}
+
 .index {
   align-self: center;
   border: 1px solid grey;
@@ -105,30 +132,127 @@ section {
 }
 
 .practice-visual {
-  padding: 0 10px 0 15px;
+  padding: 0 0;
   margin: 0 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
   font-size: 15px;
 }
 
-.practice-visual > img {
-  height: 50px;
+.carTrack {
+  margin: 0;
+  padding: 0 0;
+  width: 610px;
+  height: 30px;
+  border-bottom: 2px dashed black;
+}
+
+.car {
+  height: 27px;
+}
+
+.timer {
+  font-size: 20px;
+  text-align: right;
 }
 
 .practice-type {
   border: 1px solid grey;
   border-radius: 10px;
-  background-color: rgb(223, 248, 255);
-  padding: 0 15px 15px 15px;
-  margin: 0 0;
-  font-size: 18px;
+  /* background-color: rgb(233, 252, 253); */
+  padding: 0 0;
+  margin: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
 }
 
-.practice-type > form > input {
+.content-display {
+  margin: 20px;
+  width: 660px;
+  /* height: 100%; */
+  /* font-family: Helvetica, Arial, sans-serif; */
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.content-input {
+  position: absolute;
+  z-index: 5;
   width: 100%;
-  height: 28px;
-  font-size: 18px;
+  height: 100%;
+  resize: none;
+  opacity: 0.87;
+  cursor: default;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: rgba(211, 211, 211, 0.46);
+  border-radius: 12px;
+  color: transparent;
+}
+
+.content-input:focus {
+  background-color: transparent;
+  cursor: default;
+  color: transparent;
+  outline: none;
+}
+
+span {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.correct {
+  color: #09af00;
+  background-color: #89ff895f;
+}
+
+.incorrect {
+  background-color: rgba(255, 0, 0, 0.35);
+  color: red;
+}
+
+.cursor {
+  background-image: url(data:image/gif;base64,R0lGODlhAQAoAPABAERmZv///yH5BAg1AAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAAQAoAAACBYSPqctYACH5BAg1AAAALAAAAAABACgAgP///////wIFhI+py1gAOw==);
+  background-repeat: repeat-y;
+}
+
+.invisible > input {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  cursor: default;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  color: transparent;
+}
+
+.invisible > input:focus {
+  background-color: transparent;
+  cursor: default;
+  color: transparent;
+  outline: none;
 }
 
 .practice-link-container {
@@ -185,11 +309,16 @@ table {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
-  height: 500px;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid rgb(83, 195, 255);
+}
+
+tr {
+  height: 30px;
 }
 
 .history-link {
@@ -266,7 +395,7 @@ table, th, td {
 .show {
   border: 1px solid grey;
   border-radius: 10px;
-  padding:  0 20px 20px 20px;
+  padding: 0 20px 20px 20px;
   margin: 50px 0 20px 0;
   font-size: 18px;
   background-color: rgb(223, 248, 255);
@@ -316,7 +445,7 @@ table, th, td {
 .edit {
   border: 1px solid grey;
   border-radius: 10px;
-  padding:  10px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   margin: 50px 0 20px 0;
   font-size: 18px;
   background-color: rgb(223, 248, 255);

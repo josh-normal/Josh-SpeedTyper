@@ -1,25 +1,28 @@
 require('./config/database');
-const Resources = require('./models/resources');
 const User = require('./models/user');
 const data = require('./data')
 
 
-// const reset = Resources.deleteMany({})
-// Promise.resolve(reset).then(function() {
+// const source = Resources.deleteMany({})
+// Promise.resolve().then(function() {
 //     return Resources.create(data.resources)
 // }).then(function(result) {
+//     return Resources.find({})
+// }).then(function(result) {
+//     console.log(result)
 //     process.exit();
 // });
 
+
 // Promise.resolve().then(function() {
-//     User.findById("61e9f0262b7555aaa7405235", function(err, user) {
-//         data.history.forEach(function(his) {
-//             user.history.push(his)
+//     User.findById("61eb5d7dedf230a47745613c", function(err, user) {
+//         data.resources.forEach(function(source) {
+//             user.resources.push(source)
 //         })
 //         user.save()
 //     })
 // }).then(function() {
-//     return User.findById("61e9f0262b7555aaa7405235")
+//     return User.findById("61eb5d7dedf230a47745613c")
 // }).then(function(result) {
 //     console.log(result)
 //     process.exit()

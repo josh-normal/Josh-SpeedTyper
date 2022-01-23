@@ -31,11 +31,7 @@ exports.resources = [
         content: `Living in the solar system, we have the chance to study, at close range, perhaps the most common type of cosmic object - a star. Our Sun is a star, and a fairly average star at that, but with one unique feature: It is very close to us - some 300,000 times closer than the next nearest star, Alpha Centauri.` },
 ];
 
-exports.history = [
-    { speed: 45, time: '01-18-2021', source: "61e9ecaf477e98d3d7c8ee3f" },
-    { speed: 42, time: '01-28-2021', source: "61e9ecaf477e98d3d7c8ee42" },
-    { speed: 38, time: '01-17-2021', source: "61e9ecaf477e98d3d7c8ee44" },
-    { speed: 57, time: '01-20-2021', source: "61e9ecaf477e98d3d7c8ee3f" },
-    { speed: 60, time: '01-21-2021', source: "61e9ecaf477e98d3d7c8ee46" },
-    { speed: 53, time: '01-18-2021', source: "61e9ecaf477e98d3d7c8ee46" },
+exports.images = [
+    { name: 'car', link: 'https://i.imgur.com/ldkblNL.png' },
+    { name: 'keyboard', link: 'https://i.imgur.com/WfWCAw1.png' },
 ];

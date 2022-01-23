@@ -1,25 +1,13 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport')
-const User = require('../models/user')
-const indexCtr = require('../controllers/index')
 
 
-router.get('/', function(req, res, next) {
-  let modelQuery = req.query.name ? {name: new RegExp(req.query.name, 'i')} : {};
-  User.find(modelQuery).exec(function(err, user) {
-    if (err) return next(err);
-    res.render('index', { user, visitor: req.user, });
-  })
+router.get('/', isLoggedIn, function(req, res, next) {
+  res.send("hello")
 });
 
-/* GET users listing. */
-router.get('/practice', indexCtr.practice);
-router.get('/history', isLoggedIn, indexCtr.history);
-
-
-
-
+// Oauth authentication
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email']}
@@ -28,8 +16,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/',
-    failureRedirect: '/',
+  successRedirect: '/',
+  failureRedirect: '/',
   }
 ));
 
@@ -39,8 +27,11 @@ router.get('/logout', function(req, res) {
 });
 
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next()
-  res.redirect('/auth/google')
+  if (req.isAuthenticated()) {
+    return res.redirect('/user')
+  } else {
+    return res.render('prompt')
+  }
 }
 
 module.exports = router;

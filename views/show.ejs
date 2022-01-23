@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="icon" href="../images/keyboard.png" type="image/icon type">
+    <link rel="stylesheet" href="../../../stylesheets/style.css">
+    <link rel="icon" href="../../../images/keyboard.png" type="image/icon type">
     <title>Josh's Speed Typer</title>
 </head>
 <body>
     <header>
         <div class="icon">
-            <img src="../images/keyboard.png" alt="keyboard icon">
-                <h1>SpeedTyper</h1>
+            <img src="../../../images/keyboard.png" alt="keyboard icon">
+            <h1><a href="/user">SpeedTyper</a></h1>
         </div>
         <div class="header-link">
-            <h1><a href="/">Home</a></h1>
-            <h1><a href="/resources">Resources</a></h1>
-            <h1><a href="/">Sign in</a></h1>
+            <h1><a href="/user">Home</a></h1>
+            <h1><a href="/user/resources">Resources</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
         </div>
     </header>
 
@@ -29,18 +33,18 @@
         <p>Published on: <%= source.publish %></p>
         <p>Content:</p>
         <div class="show-content">
-            <p><%= source.content %>Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues.</p>
+            <p><%= source.content %></p>
         </div>
     </div>
 
     <div class="show-link-container">
         <div class="show-link">
-            <a href="/resources">Back</a>
+            <a href="/user/resources">Back</a>
         </div>
         <div class="show-link">
-            <a href="/resources/show/edit">Edit this</a>
+            <a href="/user/resources/<%= source.id %>/edit">Edit this</a>
         </div>
-        <form class="show-link" action="/resources/show/<!-- ejs id  -->id?_method=DELETE" method="DELETE">
+        <form class="show-link" action="/user/resources/<%= source.id %>/show?_method=DELETE" method="POST">
             <button class="show-link-btn" type="submit">Delete</button>
         </form>
     </div>

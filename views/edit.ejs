@@ -4,51 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../stylesheets/style.css">
-    <link rel="icon" href="../images/keyboard.png" type="image/icon type">
+    <link rel="stylesheet" href="../../../stylesheets/style.css">
+    <link rel="icon" href="../../images/keyboard.png" type="image/icon type">
     <title>Josh's Speed Typer</title>
 </head>
 <body>
     <header>
         <div class="icon">
             <img src="../../images/keyboard.png" alt="keyboard icon">
-                <h1>SpeedTyper</h1>
+            <h1><a href="/user">SpeedTyper</a></h1>
         </div>
         <div class="header-link">
-            <h1><a href="/">Home</a></h1>
-            <h1><a href="/resources">Resources</a></h1>
-            <h1><a href="/">Sign in</a></h1>
+            <h1><a href="/user">Home</a></h1>
+            <h1><a href="/user/resources">Resources</a></h1>
+            <% if (visitor) { %>
+                <h1><a href="/logout">Log Out</a></h1>
+            <% } else { %>
+                <h1><a href="/auth/google">Login with Google</a></h1>
+            <% } %>
         </div>
     </header>
     <section>
-        <form action="/resources/show/edit" method="POST">
+        <form action="/user/resources/<%= source.id %>/edit" method="POST">
             <div class="edit">
                 <label>Source type:
                     <select name="type">
                         <option selected><%= source.type %></option>
                         <option value="book">book</option>
                         <option value="movie">movie</option>
-                        <option value="music">music</option>
+                        <option value="music">song</option>
                         <option value="shows">shows</option>
                         <option value="newspaper">newspaper</option>
                         <option value="magazine">magazine</option>
                     </select>
                 </label><br>
                 <label>Source name:
-                    <input type="text" value="<%= source.name %>">
+                    <input name="name" type="text" autocomplete="off" value="<%= source.name %>">
                 </label><br>
                 <label>Author:
-                    <input type="text" value="<%= source.author %>">
+                    <input name="author" type="text" autocomplete="off" value="<%= source.author %>">
                 </label><br>
                 <label>Published on:
-                    <input type="date" value="<%= source.publish %>">
+                    <input name="publish" type="date" autocomplete="off" value="<%= source.publish %>">
                 </label>
                 <p>Content: </p>
-                <input class="edit-content" type="text" value="<%= source.content %>Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues.">
+                <input name="content" class="edit-content" autocomplete="off" type="text" value="<%= source.content %>">
             </div>
             <div class="edit-link-container">
                 <div class="edit-link">
-                    <a href="/resources/show">Back</a>
+                    <a href="/user/resources/<%= source.id %>/show">Back</a>
                 </div>
                 <button class="edit-link" type="submit">Save</button>
             </div>
