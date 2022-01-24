@@ -12,7 +12,7 @@ router.get('/resources', isLoggedIn, userCtr.renderAll);
 router.get('/resources/add', isLoggedIn, userCtr.addForm);
 router.get('/resources/:id/show', isLoggedIn, userCtr.show);
 router.get('/resources/:id/edit', isLoggedIn, userCtr.editForm);
-
+router.get('/review', isLoggedIn, userCtr.reviewSpeed)
 
 router.post('/practice', isLoggedIn, userCtr.addHistory)
 router.post('/resources', isLoggedIn, userCtr.addOne)

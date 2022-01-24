@@ -1,5 +1,7 @@
 const User = require('../models/user')
 const data = require('../data')
+let prevSpeed;
+let prevSource;
 
 module.exports = {
     home,
@@ -13,6 +15,7 @@ module.exports = {
     deleteThis,
     addOne,
     addHistory,
+    reviewSpeed,
 }
 
 function home(req, res, next) {
@@ -54,9 +57,9 @@ function history(req, res) {
             })
         })
         histories.sort((a, b) => b.when - a.when)
-        let historyWhen = histories.slice(0, 21)
+        let historyWhen = histories.slice(0, 20)
         histories.sort((a, b) => b.speed - a.speed)
-        let historySpeed = histories.slice(0, 21)
+        let historySpeed = histories.slice(0, 20)
         res.render('history', { user, visitor: req.user, historySpeed, historyWhen, });
     })
 }
@@ -136,7 +139,15 @@ function addHistory(req, res) {
         }
         user.resources[index].history.push(obj)
         user.save()
-        console.log(user)
-        res.redirect('/user/practice')
+        prevSpeed = req.body.speed
+        prevSource = user.resources[index]
+        res.redirect('/user/review')
+    })
+}
+
+function reviewSpeed(req, res) {
+    User.findById(req.user.id, function(err, user) {
+        if (err) return next(err);
+        res.render('reviews', { source: prevSource, prevSpeed, user, visitor: req.user, })
     })
 }

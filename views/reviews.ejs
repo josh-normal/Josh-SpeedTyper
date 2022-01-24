@@ -30,12 +30,12 @@
         <div class="practice">
             <div class="practice-visual">
                 <div class="carTrack">
-                    <img class="car" src="../images/car.png" alt="car">
+                    <img style="margin-left: 540px;" class="car" src="../images/car.png" alt="car">
                 </div>
-                <p class="timer">Press SPACE to start...</p>
+                <p class="timer"><%= prevSpeed %> wpm</p>
             </div>
             <div class="practice-type">
-                <textarea class="content-input" role="textbox" type="text" contenteditable="false" spellcheck="false" autocorrect="off" onpaste="false;" ondrop="false;" autocomplete="off" autocapitalize="off" autofocus></textarea>
+                <textarea disabled="true" class="content-input" role="textbox" type="text" contenteditable="false" spellcheck="false" autocorrect="off" onpaste="false;" ondrop="false;" autocomplete="off" autocapitalize="off" autofocus></textarea>
                 <div class="content-display" unselectable="on">
                     <%= source.content %>
                 </div>
@@ -56,11 +56,8 @@
             <p>Name: <%= source.name %></p>
             <p>Author: <%= source.author %></p>
             <p>Published on: <%= source.publish %></p>
+            <p>Your last speed: <%= prevSpeed %> wpm</p>
         </div>
-        <form class="invisible" action="/user/practice" method="POST">
-            <input type="text" name="sourceid" value="<%= source.id %>">
-            <input class="invisibleInput" name="speed" type="text" value="1">
-        </form>
     </section>
 </body>
 </html>

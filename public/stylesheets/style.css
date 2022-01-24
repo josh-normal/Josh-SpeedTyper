@@ -321,6 +321,26 @@ tr {
   height: 30px;
 }
 
+.img-practice {
+  background-image: url('../images/practice.png');
+}
+
+.img-practice > p {
+  color: white;
+}
+
+.img-source {
+  background-image: url('../images/book.jpg');
+}
+
+.img-history {
+  background-image: url('../images/chart.jpg');
+}
+
+.img-google {
+  background-image: url('../images/Google.jpg');
+}
+
 .history-link {
   height: 45px;
   width: 150px;

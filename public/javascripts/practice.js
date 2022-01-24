@@ -127,8 +127,6 @@ function chechInput() {
 
 function checkSpeed() {
     speed = Math.floor((charCount / 5) / (time / 60));
-    timer.innerText = speed + ' wpm';
-    displaySpeed.innerText = `Your speed is: ${speed}`;
 
     inputSpeed.value = speed;
     form.submit()
