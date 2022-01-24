@@ -14,20 +14,30 @@ You can also delete what you don't like, edit the content whenever you want, and
 
 ## Reviews:
 
-When you first come to the website, it will prompt you create an account with Google
+**When you first come to the website, it will prompt you create an account with Google**
 ![preview image](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/preview_1.png)
 
-The main page is styled simple and easy to navigate
+---
+
+**The main page is styled simple and easy to navigate**
 ![preview image](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/preview_2.png)
 
-An example of a practicing session
+---
+
+**An example of a practicing session**
 ![preview image](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/preview_3.png)
 
-You can access the list of content information, add new content, view each one, edit and even delete it.
+---
+
+**You can access the list of content information, add new content, view each one, edit and even delete it.**
 ![preview image](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/preview_4.png)
 
-Finally you can view your history
+---
+
+**Finally you can view your history**
 ![preview image](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/preview_5.png)
+
+---
 
 ## Intruction when viewing the website:
 
