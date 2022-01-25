@@ -2,7 +2,7 @@
 
 ## Click the link to go to the website:
 
-[SpeedTyper]()
+[SpeedTyper](https://josh-speedtyper.herokuapp.com/)
 
 ## Description:
 
