@@ -60,6 +60,13 @@ If you want to see your history, head over to the main page and go to the "Histo
 
 ![ERD](https://github.com/josh-normal/Josh-SpeedTyper/blob/master/img/ERD.png)
 
+## Challenges:
+
+- Make the web appplication function as a whole without any error
+- Optimize the Practicing experiences:
+- - How smooth the typing is
+- - Visual the progress with car image
+
 ## Next Step:
 
 - Create a chart to Visualize user progress
