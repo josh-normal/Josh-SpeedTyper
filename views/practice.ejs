@@ -59,8 +59,8 @@
             <p>Published on: <%= source.publish %></p>
         </div>
         <form class="invisible" action="/user/practice" method="POST">
-            <input type="text" name="sourceid" disabled value="<%= source.id %>">
-            <input class="invisibleInput" name="speed" disabled type="text" value="1">
+            <input type="text" name="sourceid" value="<%= source.id %>">
+            <input class="invisibleInput" name="speed" type="text" value="1">
         </form>
     </section>
 </body>
