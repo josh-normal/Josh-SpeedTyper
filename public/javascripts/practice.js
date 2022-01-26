@@ -14,6 +14,12 @@ let speed = 0;
 let indexPosition = 0;
 let inputPosition = 0;
 
+$(document).ready(function () {
+    $('.content-input').bind('copy paste', function (e) {
+        e.preventDefault();
+    });
+});
+
 input.onkeydown = function() {
     var key = event.keyCode || event.charCode;
     if (key == 8) {
