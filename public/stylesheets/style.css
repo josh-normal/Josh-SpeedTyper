@@ -341,9 +341,26 @@ tr {
   background-image: url('../images/Google.jpg');
 }
 
+.history-link-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .history-link {
   height: 45px;
   width: 150px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(42, 184, 42);
+  font-size: 20px;
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.average {
+  height: 45px;
+  width: 200px;
   border: 1px solid grey;
   border-radius: 5px;
   background-color: rgb(42, 184, 42);

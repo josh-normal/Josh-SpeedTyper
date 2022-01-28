@@ -58,9 +58,15 @@ function history(req, res) {
         })
         histories.sort((a, b) => b.when - a.when)
         let historyWhen = histories.slice(0, 20)
+        let historyAverage = histories.slice(0, 50)
+        let total = 0;
+        historyAverage.forEach(function(his) {
+            total += his.speed
+        })
+        let average = (total / historyAverage.length)
         histories.sort((a, b) => b.speed - a.speed)
         let historySpeed = histories.slice(0, 20)
-        res.render('history', { user, visitor: req.user, historySpeed, historyWhen, });
+        res.render('history', { user, visitor: req.user, average, historySpeed, historyWhen, });
     })
 }
 
