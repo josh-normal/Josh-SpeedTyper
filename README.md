@@ -74,3 +74,4 @@ If you want to see your history, head over to the main page and go to the "Histo
 
 - Create a chart to Visualize user progress
 - Filter Resources by Type category
+- Create an admin account where I can create resources and send them all to the users.
