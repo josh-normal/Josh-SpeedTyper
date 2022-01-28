@@ -1,6 +1,6 @@
 # Josh SpeedTyper
 
-## Click the link to go to the website:
+## Click here to go to the website:
 
 [SpeedTyper](https://josh-speedtyper.herokuapp.com/)
 
@@ -55,6 +55,8 @@ If you want to see your history, head over to the main page and go to the "Histo
 - Node.js
 - Express
 - MongoDB
+- Oauth authentication
+- Heroku hosting services
 
 ## Database Structure (Entity Relationship Diagram ERD):
 
@@ -62,6 +64,7 @@ If you want to see your history, head over to the main page and go to the "Histo
 
 ## Challenges:
 
+- I had some issue with how I design my MongoDB model with referencing, it took me a lot of time to solve but then later I realize I had to change the deasign and rework everything entirely.
 - Make the web appplication function as a whole without any error
 - Optimize the Practicing experiences:
 - - How smooth the typing is
@@ -71,4 +74,3 @@ If you want to see your history, head over to the main page and go to the "Histo
 
 - Create a chart to Visualize user progress
 - Filter Resources by Type category
-- Host Project on Heroku

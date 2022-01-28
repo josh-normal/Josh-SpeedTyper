@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+
+
 const historySchema = new Schema({
     speed: Number,
     when: Date,
@@ -22,6 +25,9 @@ const userSchema = new Schema({
     resources: [resourcesSchema],
     googleId: String,
 });
+
+
+
 
 
 module.exports = mongoose.model('User', userSchema)
